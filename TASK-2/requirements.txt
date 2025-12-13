@@ -1,0 +1,7 @@
+pandas
+matplotlib
+seaborn
+openpyxl
+python-pptx
+numpy
+sqlite3  # sqlite3 is built-in in Python; kept for clarity only
