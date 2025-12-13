@@ -18,6 +18,45 @@ df = pd.DataFrame(data, columns=columns)
 
 conn = sqlite3.connect("sales.db")
 df.to_sql("sales_transactions", conn, if_exists="replace", index=False)
-conn.close()
 
-print("sales_transactions table CREATED")
+print("sales_transactions table CREATED\n")
+
+queries = {
+    "All Completed Orders": """
+        SELECT *
+        FROM sales_transactions
+        WHERE order_status = 'Completed'
+    """,
+
+    "Revenue by Category": """
+        SELECT category,
+               SUM(total_amount) AS revenue
+        FROM sales_transactions
+        WHERE order_status = 'Completed'
+        GROUP BY category
+    """,
+
+    "Revenue by Country": """
+        SELECT country,
+               SUM(total_amount) AS revenue
+        FROM sales_transactions
+        WHERE order_status = 'Completed'
+        GROUP BY country
+    """,
+
+    "Top Products by Revenue": """
+        SELECT product_name,
+               SUM(total_amount) AS revenue
+        FROM sales_transactions
+        WHERE order_status = 'Completed'
+        GROUP BY product_name
+        ORDER BY revenue DESC
+    """
+}
+
+for title, sql in queries.items():
+    print(f"📌 {title}")
+    result_df = pd.read_sql_query(sql, conn)
+    print(result_df, "\n")
+
+conn.close()
