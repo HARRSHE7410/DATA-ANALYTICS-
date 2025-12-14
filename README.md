@@ -1,4 +1,6 @@
 # DATA-ANALYTICS-
-This repository contains all the tasks, analyses, and visualizations completed as part of the ApexPlanet Data Analytics Internship. It covers the full workflow of a data analyst — from data cleaning and transformation to exploratory analysis, dashboarding, and generating actionable insights.
+This repository contains all the tasks, analyses, and visualizations completed as part of the ApexPlanet Data Analytics Internship. It brings together everything I completed during the internship, including all major tasks, outcomes, and learnings. The work is organized around four core phases—Data Immersion & Wrangling, Exploratory Data Analysis (EDA) & Business Intelligence, Deep-Dive Analysis & Interactive Dashboarding, and Data Storytelling & Statistical Validation and atlast a webpage master portfolio —each of which has its own dedicated repository linked here.
+
+Throughout the internship, I worked with real datasets to clean and prepare data, explore trends and patterns, build meaningful visualizations and dashboards, and finally translate insights into clear, structured stories supported by statistical reasoning. This repository also includes a refined final presentation deck that summarizes the end-to-end journey, key insights, and business takeaways from the analysis. Overall, this portfolio reflects how my skills evolved across the internship and demonstrates my ability to move from raw data to validated, insight-driven conclusions using industry-relevant tools and workflows.
 
 
